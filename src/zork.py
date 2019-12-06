@@ -18,54 +18,54 @@ def room4(second, item_list1):
         if second.lower() == ("take mailbox"):
                 print("---------------------------------------------------------")
                 print("It is securely anchored.")
-                alive_dead == 'Alive'
+                alive_dead = 'Alive'
                 loop = 4
                 
         elif second.lower() == ("open mailbox"):
                 print("---------------------------------------------------------")
                 print("Opening the small mailbox reveals a leaflet.")
-                alive_dead == 'Alive'
+                alive_dead = 'Alive'
                 loop = 4
                 
         elif second.lower() == ("go north"):
                 loop = 1
-                alive_dead == 'Alive'
+                alive_dead = 'Alive'
                 
         elif second.lower() == ("open door"):
                 print("---------------------------------------------------------")
                 print("The door cannot be opened.")
-                alive_dead == 'Alive'
+                alive_dead = 'Alive'
                 loop = 4
                 
         elif second.lower() == ("take boards"):
                 print("---------------------------------------------------------")
                 print("The boards are securely fastened.")
-                alive_dead == 'Alive'
+                alive_dead = 'Alive'
                 loop = 4
         elif second.lower() == ("look at house"):
                 print("---------------------------------------------------------")
                 print("The house is a beautiful colonial house which is painted white. It is clear that the owners must have been extremely wealthy.")
-                alive_dead == 'Alive'
+                alive_dead = 'Alive'
                 loop = 4
         elif second.lower() == ("go southwest"):
                 loop = 8
-                alive_dead == 'Alive'
+                alive_dead = 'Alive'
                 
         elif second.lower() == ("read leaflet"):
                 print("---------------------------------------------------------")
                 print("Welcome to the Unofficial Python Version of Zork. Your mission is to find a Jade Statue.")
-                alive_dead == 'Alive'
+                alive_dead = 'Alive'
                 loop = 8
                 
         elif second.lower() == ('go east'):
                 loop = 12
-                alive_dead == 'Alive'
+                alive_dead = 'Alive'
                 
         elif second.lower() == ("kick the bucket"):
                 print("---------------------------------------------------------")
                 print("You die.")
                 print("---------------------------------------------------------")
-                alive_dead == 'Dead'
+                alive_dead = 'Dead'
                 dead_inp = alive_dead
                 exit_function(dead_inp)
 
@@ -80,22 +80,22 @@ def room1(north_house_inp, item_list):
 
         if north_house_inp.lower() == ("go south"):
                 loop = 4
-                alive_dead == 'Alive'
+                alive_dead = 'Alive'
         elif north_house_inp.lower() == ("swim"):
                 print("---------------------------------------------------------")
                 print("You don't have a change of clothes and you aren't here on vacation.")
                 loop = 1
-                alive_dead == 'Alive'
+                alive_dead = 'Alive'
         elif north_house_inp.lower() == ("fish"):
                 print("---------------------------------------------------------")
                 print("You spend some time fishing but nothing seems to bite.")
-                alive_dead == 'Alive'
+                alive_dead = 'Alive'
                 loop = 1
         elif north_house_inp.lower() == ("kick the bucket"):
                 print("---------------------------------------------------------")
                 print("You die.")
                 print("---------------------------------------------------------")
-                alive_dead == 'Dead'
+                alive_dead = 'Dead'
                 dead_inp = alive_dead
                 exit_function(dead_inp)
         else:
@@ -111,26 +111,27 @@ def room8(forest_inp, item_list):
         if forest_inp.lower() == ("go west"):
                 print("---------------------------------------------------------")
                 print("You would need a machete to go further west.")
-                alive_dead == 'Alive'
                 loop = 8
+                alive_dead = 'Alive'
+                
         elif forest_inp.lower() == ("go north"):
                 print("---------------------------------------------------------")
                 print("The forest becomes impenetrable to the North.")
-                alive_dead == 'Alive'
+                alive_dead = 'Alive'
                 loop = 8
         elif forest_inp.lower() == ("go south"):
                 print("---------------------------------------------------------")
                 print("Storm-tossed trees block your way.")
-                alive_dead == 'Alive'
+                alive_dead = 'Alive'
                 loop = 8
         elif forest_inp.lower() == ("go east"):
                 loop = 9
-                alive_dead == 'Alive'
+                alive_dead = 'Alive'
         elif forest_inp.lower() == ("kick the bucket"):
                 print("---------------------------------------------------------")
                 print("You die.")
                 print("---------------------------------------------------------")
-                alive_dead == 'Dead'
+                alive_dead = 'Dead'
                 dead_inp = alive_dead
                 exit_function(dead_inp)
         else:
@@ -145,16 +146,17 @@ def room9(grating_inp, item_list):
         if grating_inp.lower() == ("go south"):
                 print("---------------------------------------------------------")
                 print("You see a large ogre and turn around.")
-                alive_dead == 'Alive'
                 loop = 9
+                alive_dead = 'Alive'
+                
         elif grating_inp.lower() == ("descend grating"):
                 loop = 10
-                alive_dead == 'Alive'
+                alive_dead = 'Alive'
         elif grating_inp.lower() == ("kick the bucket"):
                 print("---------------------------------------------------------")
                 print("You die.")
                 print("---------------------------------------------------------")
-                alive_dead == 'Dead'
+                alive_dead = 'Dead'
                 dead_inp = alive_dead
                 exit_function(dead_inp)
         else:
@@ -166,43 +168,43 @@ def room10(cave_inp, item_list):
 
         if cave_inp.lower() == ("descend staircase"):
                 loop = 11
-                alive_dead == 'Alive'
+                alive_dead = 'Alive'
         elif cave_inp.lower() == ("take skeleton"):
                 print("---------------------------------------------------------")
                 print("Why would you do that? Are you some sort of sicko?")
-                alive_dead == 'Alive'
+                alive_dead = 'Alive'
                 loop = 10
         elif cave_inp.lower() == ("smash skeleton"):
                 print("---------------------------------------------------------")
                 print("Sick person. Have some respect mate.")
-                alive_dead == 'Alive'
+                alive_dead = 'Alive'
                 loop = 10
         elif cave_inp.lower() == ("light up room"):
                 print("---------------------------------------------------------")
                 print("You would need a torch or lamp to do that.")
-                alive_dead == 'Alive'
+                alive_dead = 'Alive'
                 loop = 10
         elif cave_inp.lower() == ("break skeleton"):
                 print("---------------------------------------------------------")
                 print("I have two questions: Why and With What?")
-                alive_dead == 'Alive'
+                alive_dead = 'Alive'
                 loop = 10
         elif cave_inp.lower() == ("go down staircase"):
                 loop = 11
-                alive_dead == 'Alive'
+                alive_dead = 'Alive'
         elif cave_inp.lower() == ("scale staircase"):
                 loop = 11
-                alive_dead == 'Alive'
+                alive_dead = 'Alive'
         elif cave_inp.lower() == ("kick the bucket"):
                 print("---------------------------------------------------------")
                 print("You die.")
                 print("---------------------------------------------------------")
-                alive_dead == 'Dead'
+                alive_dead = 'Dead'
                 dead_inp = alive_dead
                 exit_function(dead_inp)
         elif cave_inp.lower() == ("scale staircase"):
                 loop = 11
-                alive_dead == 'Alive'
+                alive_dead = 'Alive'
         else:
                 print("---------------------------------------------------------")
         return [loop, alive_dead]
@@ -213,13 +215,13 @@ def room11(last_inp, item_list):
         if last_inp.lower() == ("open trunk"):
                 print("---------------------------------------------------------")
                 print("You have found the Jade Statue and have completed your quest!")
-                alive_dead == 'Alive'
+                alive_dead = 'Alive'
                 loop = 11
         elif last.inp.lower() == ("kick the bucket"):
                 print("---------------------------------------------------------")
                 print("You die.")
                 print("---------------------------------------------------------")
-                alive_dead == 'Dead'
+                alive_dead = 'Dead'
                 dead_inp = alive_dead
                 exit_function(dead_inp)
         else:
@@ -238,13 +240,13 @@ def room12(new12_inp, item_list):
                 alive_dead = 'Alive'
                 loop = 12
         elif new12_inp.lower() == ("kick the bucket"):
-		print("---------------------------------------------------------")
-		print("You die.")
-		print("---------------------------------------------------------")
-                alive_dead == 'Dead'
+                print("---------------------------------------------------------")
+                print("You die.")
+                print("---------------------------------------------------------")
+                alive_dead = 'Dead'
                 dead_inp = alive_dead
                 exit_function(dead_inp)
-	else:
+        else:
                 print("---------------------------------------------------------")
         return [loop, alive_dead]
 
@@ -259,13 +261,13 @@ def room13(new13_inp, item_list):
                 loop = 12
                 alive_dead = 'Alive'
         elif new13_inp.lower() == ("kick the bucket"):
-		print("---------------------------------------------------------")
-		print("You die.")
-		print("---------------------------------------------------------")
-                alive_dead == 'Dead'
+                print("---------------------------------------------------------")
+                print("You die.")
+                print("---------------------------------------------------------")
+                alive_dead = 'Dead'
                 dead_inp = alive_dead
                 exit_function(dead_inp)
-	else:
+        else:
                 print("---------------------------------------------------------")
         return [loop, alive_dead]
 
@@ -276,12 +278,12 @@ def room14(new14_inp, item_list):
                 alive_dead = "Alive"
         elif new14_inp.lower() == ("kick the bucket"):
                 print("---------------------------------------------------------")
-		print("You die.")
-		print("---------------------------------------------------------")
-                alive_dead == 'Dead'
+                print("You die.")
+                print("---------------------------------------------------------")
+                alive_dead = 'Dead'
                 dead_inp = alive_dead
                 exit_function(dead_inp)
-	else:
+        else:
                 print("---------------------------------------------------------")
         return [loop, alive_dead]
 
@@ -299,12 +301,12 @@ def room15(new15_inp, item_list):
                 alive_dead = 'Alive'
         elif new15_inp.lower() == ("kick the bucket"):
                 print("---------------------------------------------------------")
-		print("You die.")
-		print("---------------------------------------------------------")
-                alive_dead == 'Dead'
+                print("You die.")
+                print("---------------------------------------------------------")
+                alive_dead = 'Dead'
                 dead_inp = alive_dead
                 exit_function(dead_inp)
-	else:
+        else:
                 print("---------------------------------------------------------")
         return [loop, alive_dead]
 
@@ -316,9 +318,9 @@ def room16(new16_inp, item_list):
                 alive_dead = 'Alive'
         else:
                 print("---------------------------------------------------------")
-		print("You die.")
-		print("---------------------------------------------------------")
-                alive_dead == 'Dead'
+                print("You die.")
+                print("---------------------------------------------------------")
+                alive_dead = 'Dead'
                 dead_inp = alive_dead
                 exit_function(dead_inp)
         return [loop, alive_dead]
@@ -338,12 +340,12 @@ def room17(new17_inp, item_list):
                 alive_dead = 'Alive'
         elif new15_inp.lower() == ("kick the bucket"):
                 print("---------------------------------------------------------")
-		print("You die.")
-		print("---------------------------------------------------------")
-                alive_dead == 'Dead'
+                print("You die.")
+                print("---------------------------------------------------------")
+                alive_dead = 'Dead'
                 dead_inp = alive_dead
                 exit_function(dead_inp)
-	else:
+        else:
                 print("---------------------------------------------------------")
         return [loop, alive_dead]
         
