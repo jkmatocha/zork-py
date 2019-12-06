@@ -71,6 +71,8 @@ def room4(second, item_list1):
 
         else:
                 print("---------------------------------------------------------")
+                loop = 4
+                alive_dead = 'Alive'
         return[loop, alive_dead]
 
 
@@ -100,6 +102,8 @@ def room1(north_house_inp, item_list):
                 exit_function(dead_inp)
         else:
                 print("---------------------------------------------------------")
+                loop = 1
+                alive_dead = 'Alive'
         return [loop, alive_dead]
 
 
@@ -136,6 +140,8 @@ def room8(forest_inp, item_list):
                 exit_function(dead_inp)
         else:
                 print("---------------------------------------------------------")
+                loop = 8
+                alive_dead = 'Alive'
         return [loop, alive_dead]
 
 
@@ -161,6 +167,8 @@ def room9(grating_inp, item_list):
                 exit_function(dead_inp)
         else:
                 print("---------------------------------------------------------")
+                loop = 9
+                alive_dead = "Alive"
         return [loop, alive_dead]	
 
 
@@ -207,6 +215,8 @@ def room10(cave_inp, item_list):
                 alive_dead = 'Alive'
         else:
                 print("---------------------------------------------------------")
+                loop = 10
+                alive_dead = 'Alive'
         return [loop, alive_dead]
 
 def room11(last_inp, item_list):
@@ -216,8 +226,9 @@ def room11(last_inp, item_list):
                 print("---------------------------------------------------------")
                 print("You have found the Jade Statue and have completed your quest!")
                 alive_dead = 'Alive'
-                loop = 11
-        elif last.inp.lower() == ("kick the bucket"):
+                print('You WIN!')
+                exit()
+        elif last_inp.lower() == ("kick the bucket"):
                 print("---------------------------------------------------------")
                 print("You die.")
                 print("---------------------------------------------------------")
@@ -226,6 +237,8 @@ def room11(last_inp, item_list):
                 exit_function(dead_inp)
         else:
                 print("---------------------------------------------------------")
+                loop = 11
+                alive_dead = 'Alive'
         return [loop, alive_dead]
 
 
@@ -248,6 +261,8 @@ def room12(new12_inp, item_list):
                 exit_function(dead_inp)
         else:
                 print("---------------------------------------------------------")
+                loop = 12
+                alive_dead = 'Alive'
         return [loop, alive_dead]
 
 
@@ -269,6 +284,8 @@ def room13(new13_inp, item_list):
                 exit_function(dead_inp)
         else:
                 print("---------------------------------------------------------")
+                loop = 13
+                alive_dead = 'Alive'
         return [loop, alive_dead]
 
 
@@ -285,6 +302,8 @@ def room14(new14_inp, item_list):
                 exit_function(dead_inp)
         else:
                 print("---------------------------------------------------------")
+                loop = 14
+                alive_dead = "Alive"
         return [loop, alive_dead]
 
 
@@ -308,6 +327,8 @@ def room15(new15_inp, item_list):
                 exit_function(dead_inp)
         else:
                 print("---------------------------------------------------------")
+                loop = 15
+                alive_dead = 'Alive'
         return [loop, alive_dead]
 
 
@@ -347,6 +368,8 @@ def room17(new17_inp, item_list):
                 exit_function(dead_inp)
         else:
                 print("---------------------------------------------------------")
+                loop = 17
+                alive_dead = 'Alive'
         return [loop, alive_dead]
         
                 
