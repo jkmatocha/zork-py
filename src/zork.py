@@ -368,8 +368,11 @@ def room17(new17_inp, item_list):
                 exit_function(dead_inp)
         else:
                 print("---------------------------------------------------------")
-                loop = 17
-                alive_dead = 'Alive'
+                print("You die.")
+                print("---------------------------------------------------------")
+                alive_dead = 'Dead'
+                dead_inp = alive_dead
+                exit_function(dead_inp)
         return [loop, alive_dead]
         
                 
