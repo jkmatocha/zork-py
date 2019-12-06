@@ -4,207 +4,348 @@ def Play_Zork():
 	loop = 4
 	print("---------------------------------------------------------")
 	print("Welcome to Zork - The Unofficial Python Version.")
+        return loop
 
-	while True:
-		# First Input Loop
-		while loop == 4:
-			if loop == 4:
-				print("---------------------------------------------------------")
-				print("You are standing in an open field west of a white house, with a boarded front door.")
-				print("You can see a small lake to the north.")
-				print("(A secret path leads southwest into the forest.)")
-				print("There is a Small Mailbox.")
-				second = input("What do you do? ")
+def exit_function(exit_lnp):
+        if exit_inp.lower() == "dead":
+                exit()
 
-			if second.lower() == ("take mailbox"):
-				print("---------------------------------------------------------")
-				print("It is securely anchored.")
-			elif second.lower() == ("open mailbox"):
-				print("---------------------------------------------------------")
-				print("Opening the small mailbox reveals a leaflet.")
-			elif second.lower() == ("go north"):
-				loop = 1
-			elif second.lower() == ("open door"):
-				print("---------------------------------------------------------")
-				print("The door cannot be opened.")
-			elif second.lower() == ("take boards"):
-				print("---------------------------------------------------------")
-				print("The boards are securely fastened.")
-			elif second.lower() == ("look at house"):
-				print("---------------------------------------------------------")
-				print("The house is a beautiful colonial house which is painted white. It is clear that the owners must have been extremely wealthy.")
-			elif second.lower() == ("go southwest"):
-				loop = 8
-			elif second.lower() == ("read leaflet"):
-				print("---------------------------------------------------------")
-				print("Welcome to the Unofficial Python Version of Zork. Your mission is to find a Jade Statue.")
-			elif second.lower() == ("kick the bucket"):
-				print("---------------------------------------------------------")
-				print("You die.")
-				print("---------------------------------------------------------")
-				dead_inp = input("Do you want to continue? Y/N ")
-				if dead_inp.lower() == ("n"):
-					exit()
-				if dead_inp.lower() == ("y"):
-					Play_Zork()
-			else:
-				print("---------------------------------------------------------")
 
-		# North of House
-		while loop == 1:
-			if loop == 1:
-				print("---------------------------------------------------------")
-				print("You find yourself at the edge of a beautiful lake aside rolling hills.")
-				print("A small pier juts out into the lake.")
-				print("A fishing rod rests on the pier.")
-				print("(You can see a white house in the distance to the south.)")
-				north_house_inp = input("What do you do? ")
+
+def room4(second, item_list1):
+
+
+                        if second.lower() == ("take mailbox"):
+                                print("---------------------------------------------------------")
+                                print("It is securely anchored.")
+                                alive_dead == 'Alive'
+                                
+                        elif second.lower() == ("open mailbox"):
+                                print("---------------------------------------------------------")
+                                print("Opening the small mailbox reveals a leaflet.")
+                                alive_dead == 'Alive'
+                                
+                        elif second.lower() == ("go north"):
+                                loop = 1
+                                alive_dead == 'Alive'
+                                
+                        elif second.lower() == ("open door"):
+                                print("---------------------------------------------------------")
+                                print("The door cannot be opened.")
+                                alive_dead == 'Alive'
+                                
+                        elif second.lower() == ("take boards"):
+                                print("---------------------------------------------------------")
+                                print("The boards are securely fastened.")
+                                alive_dead == 'Alive'
+                                
+                        elif second.lower() == ("look at house"):
+                                print("---------------------------------------------------------")
+                                print("The house is a beautiful colonial house which is painted white. It is clear that the owners must have been extremely wealthy.")
+                                alive_dead == 'Alive'
+                                
+                        elif second.lower() == ("go southwest"):
+                                loop = 8
+                                alive_dead == 'Alive'
+                                
+                        elif second.lower() == ("read leaflet"):
+                                print("---------------------------------------------------------")
+                                print("Welcome to the Unofficial Python Version of Zork. Your mission is to find a Jade Statue.")
+                                alive_dead == 'Alive'
+                                
+                        elif second.lower() == ('go east'):
+                                loop = 12
+                                alive_dead == 'Alive'
+                                
+                        elif second.lower() == ("kick the bucket"):
+                                print("---------------------------------------------------------")
+                                print("You die.")
+                                print("---------------------------------------------------------")
+                                alive_dead == 'Dead'
+                                dead_inp = alive_dead
+                                exit_function(dead_inp)
+        
+                        else:
+                                print("---------------------------------------------------------")
+                        return[loop, alive_dead]
+
+
+
+def room1(north_house_inp, item_list):
+		
 
 			if north_house_inp.lower() == ("go south"):
 				loop = 4
+				alive_dead == 'Alive'
 			elif north_house_inp.lower() == ("swim"):
 				print("---------------------------------------------------------")
 				print("You don't have a change of clothes and you aren't here on vacation.")
+				alive_dead == 'Alive'
 			elif north_house_inp.lower() == ("fish"):
 				print("---------------------------------------------------------")
 				print("You spend some time fishing but nothing seems to bite.")
+				alive_dead == 'Alive'
 			elif north_house_inp.lower() == ("kick the bucket"):
 				print("---------------------------------------------------------")
 				print("You die.")
 				print("---------------------------------------------------------")
-				dead_inp = input("Do you want to continue? Y/N ")
-				if dead_inp.lower() == ("n"):
-					exit()
-				if dead_inp.lower() == ("y"):
-					Play_Zork()
+                                alive_dead == 'Dead'
+                                dead_inp = alive_dead
+                                exit_function(dead_inp)
 			else:
 				print("---------------------------------------------------------")
+                        return [loop, alive_dead]
 
-		# Southwest Loop
-		while loop == 8:
-			if loop == 8:
-				print("---------------------------------------------------------")
-				print("This is a forest, with trees in all directions. To the east, there appears to be sunlight.")
-				forest_inp = input("What do you do? ")
+
+
+
+def room8(forest_inp, item_list):
+        
 
 			if forest_inp.lower() == ("go west"):
 				print("---------------------------------------------------------")
 				print("You would need a machete to go further west.")
+				alive_dead == 'Alive'
 			elif forest_inp.lower() == ("go north"):
 				print("---------------------------------------------------------")
 				print("The forest becomes impenetrable to the North.")
+				alive_dead == 'Alive'
 			elif forest_inp.lower() == ("go south"):
 				print("---------------------------------------------------------")
 				print("Storm-tossed trees block your way.")
+				alive_dead == 'Alive'
 			elif forest_inp.lower() == ("go east"):
 				loop = 9
+				alive_dead == 'Alive'
 			elif forest_inp.lower() == ("kick the bucket"):
 				print("---------------------------------------------------------")
 				print("You die.")
 				print("---------------------------------------------------------")
-				dead_inp = input("Do you want to continue? Y/N ")
-				if dead_inp.lower() == ("n"):
-					exit()
-				if dead_inp.lower() == ("y"):
-					Play_Zork()
+                                alive_dead == 'Dead'
+                                dead_inp = alive_dead
+                                exit_function(dead_inp)
 			else:
 				print("---------------------------------------------------------")
+                        return [loop, alive_dead]
 		
 
-		# East Loop and Grating Input
-		while loop == 9:
-			if loop == 9:
-				print("---------------------------------------------------------")
-				print("You are in a clearing, with a forest surrounding you on all sides. A path leads south.")
-				print("There is an open grating, descending into darkness.")
-				grating_inp = input("What do you do? ")
+
+
+def room9(grating_inp, item_list):
 
 			if grating_inp.lower() == ("go south"):
 				print("---------------------------------------------------------")
 				print("You see a large ogre and turn around.")
+				alive_dead == 'Alive'
 			elif grating_inp.lower() == ("descend grating"):
 				loop = 10
+				alive_dead == 'Alive'
 			elif grating_inp.lower() == ("kick the bucket"):
 				print("---------------------------------------------------------")
 				print("You die.")
 				print("---------------------------------------------------------")
-				dead_inp = input("Do you want to continue? Y/N ")
-				if dead_inp.lower() == ("n"):
-					exit()
-				if dead_inp.lower() == ("y"):
-					Play_Zork()
+                                alive_dead == 'Dead'
+                                dead_inp = alive_dead
+                                exit_function(dead_inp)
 			else:
-				print("---------------------------------------------------------")	
-
-
-		# Grating Loop and Cave Input
-		while loop == 10:
-			if loop == 10:
 				print("---------------------------------------------------------")
-				print("You are in a tiny cave with a dark, forbidding staircase leading down.")
-				print("There is a skeleton of a human male in one corner.")
-				cave_inp = input("What do you do? ")
+                        return [loop, alive_dead]	
+
+
+def room10(cave_inp, item_list):
 
 			if cave_inp.lower() == ("descend staircase"):
 				loop = 11
+				alive_dead == 'Alive'
 			elif cave_inp.lower() == ("take skeleton"):
 				print("---------------------------------------------------------")
 				print("Why would you do that? Are you some sort of sicko?")
+				alive_dead == 'Alive'
 			elif cave_inp.lower() == ("smash skeleton"):
 				print("---------------------------------------------------------")
 				print("Sick person. Have some respect mate.")
+				alive_dead == 'Alive'
 			elif cave_inp.lower() == ("light up room"):
 				print("---------------------------------------------------------")
 				print("You would need a torch or lamp to do that.")
+				alive_dead == 'Alive'
 			elif cave_inp.lower() == ("break skeleton"):
 				print("---------------------------------------------------------")
 				print("I have two questions: Why and With What?")
+				alive_dead == 'Alive'
 			elif cave_inp.lower() == ("go down staircase"):
 				loop = 11
+				alive_dead == 'Alive'
 			elif cave_inp.lower() == ("scale staircase"):
 				loop = 11
+				alive_dead == 'Alive'
 			elif cave_inp.lower() == ("kick the bucket"):
 				print("---------------------------------------------------------")
 				print("You die.")
 				print("---------------------------------------------------------")
-				dead_inp = input("Do you want to continue? Y/N ")
-				if dead_inp.lower() == ("n"):
-					exit()
-				if dead_inp.lower() == ("y"):
-					Play_Zork()
+                                alive_dead == 'Dead'
+                                dead_inp = alive_dead
+                                exit_function(dead_inp)
 			elif cave_inp.lower() == ("scale staircase"):
 				loop = 11
+				alive_dead == 'Alive'
 			else:
 				print("---------------------------------------------------------")
+                        return [loop, alive_dead]
 
-
-		# End of game
-		while loop == 11:
-			if loop == 11:
-				print("---------------------------------------------------------")
-				print("You have entered a mud-floored room.")
-				print("Lying half buried in the mud is an old trunk, bulging with jewels.")
-				last_inp = input("What do you do? ")
+def room11(last_inp, item_list):
+        
 
 			if last_inp.lower() == ("open trunk"):
 				print("---------------------------------------------------------")
 				print("You have found the Jade Statue and have completed your quest!")
+				alive_dead == 'Alive'
 			elif last.inp.lower() == ("kick the bucket"):
 				print("---------------------------------------------------------")
 				print("You die.")
 				print("---------------------------------------------------------")
-				dead_inp = input("Do you want to continue? Y/N ")
-				if dead_inp.lower() == ("n"):
-					exit()
-				if dead_inp.lower() == ("y"):
-					Play_Zork()
+                                alive_dead == 'Dead'
+                                dead_inp = alive_dead
+                                exit_function(dead_inp)
 			else:
 				print("---------------------------------------------------------")
-			
-			# Exit loop at the end of game
-			exit_inp = input("Do you want to continue? Y/N ")
-			if exit_inp.lower() == ("n"):
-				exit()
-			if exit_inp.lower() == ("y"):
+                        return [loop, alive_dead]
 
-				Play_Zork()
+
+def room12(new12_inp, item_list):
+
+        
+        if new12_inp.lower() == ('going south'):
+                loop = 4
+                alive_dead = 'Alive'
+        elif new12_inp.lower() == ('going west'):
+                print('Opening a rickety window you climb into the house')
+                alive_dead = 'Alive'
+        elif new12_inp.lower() == ("kick the bucket"):
+		print("---------------------------------------------------------")
+		print("You die.")
+		print("---------------------------------------------------------")
+                alive_dead == 'Dead'
+                dead_inp = alive_dead
+                exit_function(dead_inp)
+	else:
+                print("---------------------------------------------------------")
+        return [loop, alive_dead]
+
+
+
+
+def room13(new13_inp, item_list):
+        if new13_inp.lower() == ('going up'):
+                loop = 14
+                alive_dead = 'Alive'
+        elif new13_inp.lower() == ('going east'):
+                loop = 12
+                alive_dead = 'Alive'
+        elif new13_inp.lower() == ("kick the bucket"):
+		print("---------------------------------------------------------")
+		print("You die.")
+		print("---------------------------------------------------------")
+                alive_dead == 'Dead'
+                dead_inp = alive_dead
+                exit_function(dead_inp)
+	else:
+                print("---------------------------------------------------------")
+        return [loop, alive_dead]
+
+
+def room14(new14_inp, item_list):
+        if new14_inp.lower() == ('going down'):
+                loop = 13
+                alive_dead = "Alive"
+        elif new14_inp.lower() == ("kick the bucket"):
+                print("---------------------------------------------------------")
+		print("You die.")
+		print("---------------------------------------------------------")
+                alive_dead == 'Dead'
+                dead_inp = alive_dead
+                exit_function(dead_inp)
+	else:
+                print("---------------------------------------------------------")
+        return [loop, alive_dead]
+
+
+
+def room15(new15_inp, item_list):
+        if new15_inp.lower() == ('going north'):
+                loop = 10
+                alive_dead = 'Alive'
+        elif new15_inp.lower() == ('going south'):
+                loop = 16
+                alive_dead = 'Alive'
+        elif new15_inp.lower() == ('going east'):
+                loop = 17
+                alive_dead = 'Alive'
+        elif new15_inp.lower() == ("kick the bucket"):
+                print("---------------------------------------------------------")
+		print("You die.")
+		print("---------------------------------------------------------")
+                alive_dead == 'Dead'
+                dead_inp = alive_dead
+                exit_function(dead_inp)
+	else:
+                print("---------------------------------------------------------")
+        return [loop, alive_dead]
+
+
+
+def room16(new16_inp, item_list):
+        if new16_inp.lower() == ('going north'):
+                loop = 15
+                alive_dead = 'Alive'
+        else:
+                print("---------------------------------------------------------")
+		print("You die.")
+		print("---------------------------------------------------------")
+                alive_dead == 'Dead'
+                dead_inp = alive_dead
+                exit_function(dead_inp)
+        return [loop, alive_dead]
+
+def room17(new17_inp, item_list):
+        if new17_inp.lower() == ('going east'):
+                loop = 15
+                alive_dead = 'Alive'
+        elif new17_inp.lower() == ('going west'):
+                loop = 15
+                alive_dead = 'Alive'
+        elif new17_inp.lower() == ('going south'):
+                loop = 15
+                alive_dead = 'Alive'
+        elif new15_inp.lower() == ("kick the bucket"):
+                print("---------------------------------------------------------")
+		print("You die.")
+		print("---------------------------------------------------------")
+                alive_dead == 'Dead'
+                dead_inp = alive_dead
+                exit_function(dead_inp)
+	else:
+                print("---------------------------------------------------------")
+        return [loop, alive_dead]
+        
+                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
