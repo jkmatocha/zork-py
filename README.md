@@ -11,3 +11,5 @@ To get started:
 1. Have Fun!
 
 **Note: This program is built to run on Python 3.**
+
+My custom room is actually a trap room. If you chose any direction such as go east, go south, or go west, you will be returned back room 15. But the trap is, if you enter any other word besides those directions you are killed.
