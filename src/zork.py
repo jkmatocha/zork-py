@@ -6,7 +6,7 @@ def Play_Zork():
 	print("Welcome to Zork - The Unofficial Python Version.")
 	return loop
 
-def exit_function(exit_lnp):
+def exit_function(exit_inp):
         if exit_inp.lower() == "dead":
                 exit()
 
